@@ -1,0 +1,41 @@
+<html>
+<head>
+<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+<script>
+
+var socket = io();
+var sid;
+
+console.log('***************');
+
+socket.on('welcome', function(msg){
+	sid = msg;
+});
+
+</script>
+</head>
+<body bgcolor="black">
+<div  position="absolute" top="0" left="0" width="100%" height="100%" overflow="hidden">
+
+<canvas id="canvas" width="800" height="600" style="margin:auto; display: block; padding: 0;"></canvas>
+
+<!-- Includes -->
+<script src="/Globals.js"></script>
+<script src="/Gameplay.js"></script>
+<script src="/OverlayText.js"></script>
+<script src="/Lobby.js"></script>
+<script src="/Player.js"></script>
+<script src="/Bullet.js"></script>
+<script src="/Input.js"></script>
+<script src="/Audio.js"></script>
+
+<!-- Main -->
+<script src="/game.js"></script>
+</div>
+<center>
+<p style="color:#777">
+WASD - Movement  &nbsp; &nbsp; &nbsp; &nbsp; Mouse - Aim/Shoot 
+</p>
+</center>
+</body>
+</html>
